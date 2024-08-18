@@ -1,0 +1,15 @@
+dependencies {
+    implementation project(':hangongsu-core')
+    implementation project(':hangongsu-infrastructure')
+    implementation project(':hangongsu-support')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+jar {
+    enabled = true
+}
+
+bootJar {
+    enabled = true
+}
+

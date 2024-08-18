@@ -1,0 +1,14 @@
+dependencies {
+    implementation project(':hangongsu-core')
+    implementation project(':hangongsu-support')
+    runtimeOnly 'com.h2database:h2'
+}
+
+jar {
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}
+
