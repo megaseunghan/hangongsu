@@ -1,0 +1,13 @@
+dependencies {
+    implementation project(':hangongsu-support')
+    api 'org.springframework.boot:spring-boot-starter-data-jpa'
+}
+
+jar {
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}
+

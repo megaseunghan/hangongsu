@@ -1,1 +1,6 @@
 rootProject.name = 'matching'
+
+include 'hangongsu-api'
+include 'hangongsu-core'
+include 'hangongsu-infrastructure'
+include 'hangongsu-support'
