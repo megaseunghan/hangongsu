@@ -1,4 +1,4 @@
-package com.hangongsu.api.response;
+package com.hangongsu.api.dto.response;
 
 import com.hangongsu.support.exception.ErrorCode;
 import lombok.AccessLevel;

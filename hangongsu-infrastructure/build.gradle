@@ -1,7 +1,15 @@
 dependencies {
     implementation project(':hangongsu-core')
     implementation project(':hangongsu-support')
+
+    // DB
     runtimeOnly 'com.h2database:h2'
+
+    // REST Client
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // JWT
+    api 'io.jsonwebtoken:jjwt:0.12.5'
 }
 
 jar {
