@@ -1,10 +1,11 @@
 package com.hangongsu.support.common.config;
 
 import com.hangongsu.support.property.auth.KakaoOAuthProperty;
+import com.hangongsu.support.property.jwt.JwtProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@ComponentScan(basePackages = "com.hangongsu.support", lazyInit = true)
-@EnableConfigurationProperties({KakaoOAuthProperty.class})
+@Configuration
+@EnableConfigurationProperties(value = {KakaoOAuthProperty.class, JwtProperty.class})
 public class EnablePropertiesConfig {
 }
