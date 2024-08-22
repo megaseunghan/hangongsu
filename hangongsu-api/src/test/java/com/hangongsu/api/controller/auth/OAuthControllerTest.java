@@ -2,11 +2,9 @@ package com.hangongsu.api.controller.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hangongsu.api.provider.auth.OAuthRedirectUriProviderComposite;
-import com.hangongsu.core.application.auth.OAuthClientComposite;
 import com.hangongsu.core.domain.user.vo.Platform;
 import com.hangongsu.core.dto.auth.response.LoginResponse;
 import com.hangongsu.core.port.auth.in.OAuthLoginService;
-import com.hangongsu.core.port.user.in.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +35,6 @@ class OAuthControllerTest {
     protected OAuthRedirectUriProviderComposite redirectUriProvider;
     @MockBean
     protected OAuthLoginService oAuthLoginService;
-    @MockBean
-    private OAuthClientComposite oAuthClient;
-    @MockBean
-    private UserService userService;
 
     @BeforeEach
     void setup(WebApplicationContext context) {
