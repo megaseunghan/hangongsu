@@ -26,7 +26,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-@SuppressWarnings(value = "all")
 @WebMvcTest(OAuthController.class)
 class OAuthControllerTest {
 
