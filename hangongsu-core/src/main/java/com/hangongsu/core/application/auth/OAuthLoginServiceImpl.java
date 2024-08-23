@@ -23,8 +23,8 @@ public class OAuthLoginServiceImpl implements OAuthLoginService {
     public LoginResponse login(String authorizationCode, Platform platform) {
         String accessToken = oAuthClient.getAccessToken(authorizationCode, platform);
         UserInfoResponse userInfo = oAuthClient.retrieveUserInfo(accessToken, platform);
-        TokenResponse token = tokenClient.createAccessToken(userInfo);
         User user = userLoginService.login(userInfo);
+        TokenResponse token = tokenClient.createAccessToken(user.getUserId());
 
         return LoginResponse.from(user.getUserId(), token);
     }

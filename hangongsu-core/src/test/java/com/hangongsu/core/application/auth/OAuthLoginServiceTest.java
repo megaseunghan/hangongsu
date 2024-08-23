@@ -59,7 +59,7 @@ class OAuthLoginServiceTest {
 
         given(oAuthClient.getAccessToken(authorizationCode, platform)).willReturn(accessToken);
         given(oAuthClient.retrieveUserInfo(accessToken, platform)).willReturn(userInfo);
-        given(tokenClient.createAccessToken(userInfo)).willReturn(jwtAccessToken);
+        given(tokenClient.createAccessToken(user.getUserId())).willReturn(jwtAccessToken);
         given(userLoginService.login(userInfo)).willReturn(user);
 
         // when
